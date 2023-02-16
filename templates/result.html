@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Winsun 
+		</div>
+		<h2>Flight Crash Source Identification & Mitigation</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results for Comment</b></p>
+	<div class="results">
+
+
+	<p>Prediction Identified for <b>{{input}}</b>: </p>
+	{% if prediction == "pilot_issue"%}
+	<h2 style="color:red;">Its a pilot Issue!!!</h2>
+	{% elif  prediction == "environment_issue"%}
+	<h2 style="color:blue;">Its a Environmental Issue!!!</h2>
+	{% elif  prediction == "flight_issue"%}
+	<h2 style="color:blue;">Its a Flight Issue!!!</h2>
+	{% endif %}
+
+	<a href="{{ url_for('home') }}">Go Back to Main Page & Predict further more!!!</a>
+	</div>
+</body>
+</html>
